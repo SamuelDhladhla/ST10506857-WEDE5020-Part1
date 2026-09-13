@@ -414,3 +414,171 @@ footer p {
 }
 
 /* Responsive breakpoints intentionally follow in the next Part 2 commit. */
+/* =========================
+   14. Responsive Design
+   Part 2 — Tablet and Mobile
+   ========================= */
+
+/* Tablet breakpoint: reduces spacing and changes multi-column layouts */
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem 5%;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    main {
+        width: min(92%, 760px);
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    main > section,
+    main > aside,
+    main > figure {
+        margin: 3.5rem 0;
+    }
+
+    /* Hero changes from two columns to one column */
+    main > section:first-child {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        min-height: auto;
+    }
+
+    /* Featured cards display in two columns on tablet */
+    section[aria-labelledby="featured-heading"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* About preview becomes one column */
+    section[aria-labelledby="about-preview-heading"] {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Menu sections use one item per row */
+    #coffee,
+    #food,
+    #baked {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding: 2rem 5%;
+    }
+}
+
+
+/* Mobile breakpoint: single-column layout and touch-friendly navigation */
+@media (max-width: 600px) {
+
+    body {
+        font-size: 0.95rem;
+    }
+
+    header {
+        position: static;
+        align-items: stretch;
+    }
+
+    header > a {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.35rem;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+        text-align: center;
+        background-color: #f2ede6;
+        border: 1px solid #e1d7cd;
+        border-radius: 0.35rem;
+    }
+
+    nav a:hover,
+    nav a:focus {
+        background-color: #e8ddd2;
+        border-bottom-color: #6f4e37;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    main > section,
+    main > aside,
+    main > figure {
+        margin: 2.5rem 0;
+    }
+
+    /* Featured cards become single-column */
+    section[aria-labelledby="featured-heading"] {
+        grid-template-columns: 1fr;
+    }
+
+    /* Hero call-to-action links stack vertically */
+    main > section:first-child p a {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    /* Reduce large section padding on smaller screens */
+    section[aria-labelledby="about-preview-heading"],
+    section[aria-labelledby="visit-heading"],
+    section[aria-labelledby="menu-enquiry-heading"],
+    form,
+    aside {
+        padding: 1.25rem;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 3rem;
+        padding: 1.75rem 5%;
+        text-align: center;
+    }
+}
