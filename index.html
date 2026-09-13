@@ -38,7 +38,13 @@
                 </p>
             </div>
             <figure>
-                <img src="images/hero-coffee.svg" alt="Illustration of a cup of coffee on a café table">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/hero-coffee.svg">
+                    <source media="(max-width: 900px)" srcset="images/hero-coffee.svg">
+                    <img src="images/hero-coffee.svg"
+                         alt="Illustration of a cup of coffee on a café table"
+                         loading="eager">
+                </picture>
                 <figcaption>Freshly prepared coffee served in a welcoming neighbourhood setting.</figcaption>
             </figure>
         </section>
@@ -48,21 +54,36 @@
             <h2 id="featured-heading">What you can enjoy</h2>
 
             <article>
-                <img src="images/coffee-card.svg" alt="Illustration of a cup of coffee">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/coffee-card.svg">
+                    <img src="images/coffee-card.svg"
+                         alt="Illustration of a cup of coffee"
+                         loading="lazy">
+                </picture>
                 <h3>Speciality Coffee</h3>
                 <p>Espresso-based favourites, filter coffee and seasonal drinks prepared throughout the day.</p>
                 <a href="menu.html#coffee">Explore coffee</a>
             </article>
 
             <article>
-                <img src="images/food-card.svg" alt="Illustration of a fresh café sandwich">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/food-card.svg">
+                    <img src="images/food-card.svg"
+                         alt="Illustration of a fresh café sandwich"
+                         loading="lazy">
+                </picture>
                 <h3>Light Meals</h3>
                 <p>Simple breakfast and lunch options made for quick visits, meetings and relaxed catch-ups.</p>
                 <a href="menu.html#food">Explore food</a>
             </article>
 
             <article>
-                <img src="images/baked-goods.svg" alt="Illustration of a freshly baked pastry">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/baked-goods.svg">
+                    <img src="images/baked-goods.svg"
+                         alt="Illustration of a freshly baked pastry"
+                         loading="lazy">
+                </picture>
                 <h3>Baked Goods</h3>
                 <p>Fresh pastries and sweet treats that pair perfectly with your morning or afternoon coffee.</p>
                 <a href="menu.html#baked">Explore baked goods</a>
@@ -72,7 +93,12 @@
         <!-- About preview links the Home page to the full business story -->
         <section aria-labelledby="about-preview-heading">
             <figure>
-                <img src="images/cafe-interior.svg" alt="Illustration of the Oak and Bean Coffee café interior">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/cafe-interior.svg">
+                    <img src="images/cafe-interior.svg"
+                         alt="Illustration of the Oak and Bean Coffee café interior"
+                         loading="lazy">
+                </picture>
             </figure>
             <div>
                 <h2 id="about-preview-heading">A café built around community</h2>

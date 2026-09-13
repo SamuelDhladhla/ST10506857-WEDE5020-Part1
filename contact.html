@@ -57,7 +57,12 @@
         </section>
 
         <figure>
-            <img src="images/cafe-interior.svg" alt="Illustration of a warm café interior with tables and a large window">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/cafe-interior.svg">
+                <img src="images/cafe-interior.svg"
+                     alt="Illustration of a warm café interior with tables and a large window"
+                     loading="lazy">
+            </picture>
             <figcaption>Oak &amp; Bean Coffee is designed as a calm, welcoming neighbourhood space.</figcaption>
         </figure>
     </main>
