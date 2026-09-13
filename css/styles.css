@@ -1,33 +1,416 @@
 /*
-WEDE5020 Part 1 correction stylesheet.
-Only a small readability baseline is included here.
-Full visual styling and responsive design will be completed in Part 2.
+WEDE5020 Part 2 — Desktop CSS
+Oak & Bean Coffee
+
+This stylesheet applies the first visual-design layer for Part 2.
+Responsive breakpoints will be added in a later commit so that the
+Git history clearly shows the development process.
 */
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
     line-height: 1.6;
+    color: #2f2925;
+    background-color: #f8f5f0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: #6f4e37;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #3f2d22;
+    text-decoration: underline;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    line-height: 1.2;
+    color: #3f2d22;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: -0.04rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+strong {
+    color: #3f2d22;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.25rem 6%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e1d7cd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header > a {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #3f2d22;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-header,
-main,
-footer {
-    padding: 1rem;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav li {
+nav a {
     display: inline-block;
-    margin-right: 1rem;
+    padding: 0.5rem 0;
+    font-weight: 600;
+    color: #4b4038;
+    border-bottom: 2px solid transparent;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+nav a:hover,
+nav a:focus {
+    color: #6f4e37;
+    border-bottom-color: #6f4e37;
+    text-decoration: none;
 }
+
+main {
+    width: min(1180px, 88%);
+    margin: 0 auto;
+}
+
+main > section,
+main > aside,
+main > figure {
+    margin: 4.5rem 0;
+}
+
+main > section:first-child {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 4rem;
+    min-height: 68vh;
+}
+
+main > section:first-child > div > p:first-child {
+    color: #8b674d;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+    font-size: 0.9rem;
+}
+
+main > section:first-child figure {
+    margin: 0;
+}
+
+main > section:first-child figcaption {
+    margin-top: 0.75rem;
+    color: #6d625b;
+    font-size: 0.9rem;
+}
+
+main > section:first-child p a {
+    display: inline-block;
+    margin-right: 0.75rem;
+    margin-top: 0.75rem;
+    padding: 0.8rem 1.2rem;
+    background-color: #6f4e37;
+    color: #ffffff;
+    border: 2px solid #6f4e37;
+    border-radius: 0.35rem;
+    font-weight: 700;
+}
+
+main > section:first-child p a + a {
+    background-color: transparent;
+    color: #6f4e37;
+}
+
+main > section:first-child p a:hover,
+main > section:first-child p a:focus {
+    background-color: #3f2d22;
+    border-color: #3f2d22;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#featured-heading {
+    grid-column: 1 / -1;
+}
+
+section[aria-labelledby="featured-heading"] {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+section[aria-labelledby="featured-heading"] article {
+    background-color: #ffffff;
+    border: 1px solid #e4d9cf;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    box-shadow: 0 0.4rem 1.1rem rgba(63, 45, 34, 0.08);
+}
+
+section[aria-labelledby="featured-heading"] article h3,
+section[aria-labelledby="featured-heading"] article p,
+section[aria-labelledby="featured-heading"] article a {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+}
+
+section[aria-labelledby="featured-heading"] article h3 {
+    margin-top: 1.25rem;
+}
+
+section[aria-labelledby="featured-heading"] article a {
+    display: inline-block;
+    margin-bottom: 1.4rem;
+    font-weight: 700;
+}
+
+section[aria-labelledby="about-preview-heading"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem;
+    background-color: #efe6dc;
+    border-radius: 0.75rem;
+}
+
+section[aria-labelledby="about-preview-heading"] figure {
+    margin: 0;
+}
+
+section[aria-labelledby="about-preview-heading"] a {
+    font-weight: 700;
+}
+
+section[aria-labelledby="visit-heading"],
+section[aria-labelledby="menu-enquiry-heading"] {
+    padding: 2.5rem;
+    text-align: center;
+    background-color: #3f2d22;
+    color: #ffffff;
+    border-radius: 0.75rem;
+}
+
+section[aria-labelledby="visit-heading"] h2,
+section[aria-labelledby="visit-heading"] strong,
+section[aria-labelledby="menu-enquiry-heading"] h2 {
+    color: #ffffff;
+}
+
+section[aria-labelledby="visit-heading"] a,
+section[aria-labelledby="menu-enquiry-heading"] a {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.8rem 1.2rem;
+    background-color: #ffffff;
+    color: #3f2d22;
+    border-radius: 0.35rem;
+    font-weight: 700;
+}
+
+section[aria-labelledby="visit-heading"] a:hover,
+section[aria-labelledby="visit-heading"] a:focus,
+section[aria-labelledby="menu-enquiry-heading"] a:hover,
+section[aria-labelledby="menu-enquiry-heading"] a:focus {
+    background-color: #efe6dc;
+    text-decoration: none;
+}
+
+section[aria-labelledby="story-heading"],
+section[aria-labelledby="mission-heading"],
+section[aria-labelledby="values-heading"],
+section[aria-labelledby="audience-heading"] {
+    max-width: 850px;
+}
+
+section[aria-labelledby="values-heading"] ul {
+    padding-left: 1.25rem;
+}
+
+section[aria-labelledby="values-heading"] li {
+    margin-bottom: 0.75rem;
+}
+
+#coffee,
+#food,
+#baked {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+#coffee > h2,
+#food > h2,
+#baked > h2 {
+    grid-column: 1 / -1;
+}
+
+#coffee article,
+#food article,
+#baked article {
+    padding: 1.3rem;
+    background-color: #ffffff;
+    border: 1px solid #e4d9cf;
+    border-radius: 0.5rem;
+}
+
+#coffee article p:last-child,
+#food article p:last-child,
+#baked article p:last-child {
+    margin-bottom: 0;
+    color: #6f4e37;
+    font-size: 1.1rem;
+}
+
+form {
+    max-width: 760px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #e4d9cf;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.4rem 1.1rem rgba(63, 45, 34, 0.06);
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #b9a99b;
+    border-radius: 0.35rem;
+    background-color: #ffffff;
+    color: #2f2925;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgba(111, 78, 55, 0.18);
+    border-color: #6f4e37;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 0.85rem 1.35rem;
+    border: 0;
+    border-radius: 0.35rem;
+    background-color: #6f4e37;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background-color: #3f2d22;
+}
+
+aside {
+    max-width: 760px;
+    padding: 1.5rem;
+    background-color: #efe6dc;
+    border-left: 0.35rem solid #6f4e37;
+}
+
+address {
+    font-style: normal;
+}
+
+address a {
+    font-weight: 600;
+}
+
+section[aria-labelledby="hours-heading"] ul {
+    padding-left: 1.25rem;
+}
+
+main > figure {
+    max-width: 900px;
+}
+
+main > figure figcaption {
+    margin-top: 0.75rem;
+    color: #6d625b;
+    font-size: 0.9rem;
+}
+
+footer {
+    margin-top: 5rem;
+    padding: 2.5rem 6%;
+    background-color: #2f2925;
+    color: #f8f5f0;
+}
+
+footer strong {
+    color: #ffffff;
+}
+
+footer p {
+    margin-bottom: 0.45rem;
+}
+
+/* Responsive breakpoints intentionally follow in the next Part 2 commit. */
