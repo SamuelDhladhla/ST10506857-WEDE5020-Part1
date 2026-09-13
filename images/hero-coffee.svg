@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<rect width="1200" height="700" fill="#f2ede6"/>
+<rect x="0" y="520" width="1200" height="180" fill="#d8c7b5"/>
+<ellipse cx="600" cy="560" rx="250" ry="40" fill="#b9a28b"/>
+<rect x="470" y="245" width="260" height="250" rx="30" fill="#ffffff" stroke="#5b4636" stroke-width="8"/>
+<path d="M730 305 C850 295 860 440 735 430" fill="none" stroke="#5b4636" stroke-width="24"/>
+<ellipse cx="600" cy="245" rx="128" ry="28" fill="#7b4f2f"/>
+<path d="M555 175 C520 120 580 100 560 55" fill="none" stroke="#9c8d7d" stroke-width="12" stroke-linecap="round"/>
+<path d="M635 175 C600 120 660 100 640 55" fill="none" stroke="#9c8d7d" stroke-width="12" stroke-linecap="round"/>
+<text x="600" y="640" text-anchor="middle" font-family="Arial" font-size="36" fill="#5b4636">Oak &amp; Bean Coffee</text>
+</svg>

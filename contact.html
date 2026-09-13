@@ -3,38 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Website Project</title>
+    <meta name="description" content="Find Oak and Bean Coffee contact details, opening hours and location information.">
+    <title>Contact | Oak &amp; Bean Coffee</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <!-- Header and main navigation -->
+    <!-- Site header: repeated on every page to keep navigation consistent -->
     <header>
-        <h1>Website Project</h1>
-        <nav>
+        <a href="index.html" aria-label="Oak and Bean Coffee home">
+            <strong>Oak &amp; Bean Coffee</strong>
+        </a>
+        <nav aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services / Main Offering</a></li>
+                <li><a href="menu.html">Menu</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main page content -->
+    <!-- Main content: practical contact details, hours and directions -->
     <main>
-        <section>
-            <h2>Contact</h2>
-            <p>Add the approved organisation's contact details, operating hours and location information here.</p>
+        <section aria-labelledby="contact-heading">
+            <h1 id="contact-heading">Contact Oak &amp; Bean Coffee</h1>
+            <p>Whether you are planning a visit or have a quick question, here is how to reach us.</p>
         </section>
+
+        <section aria-labelledby="details-heading">
+            <h2 id="details-heading">Contact Details</h2>
+            <address>
+                <p><strong>Address:</strong> 18 Willow Street, Johannesburg, Gauteng</p>
+                <p><strong>Telephone:</strong> <a href="tel:+27115550148">011 555 0148</a></p>
+                <p><strong>Email:</strong> <a href="mailto:hello@oakandbean.example">hello@oakandbean.example</a></p>
+            </address>
+        </section>
+
+        <section aria-labelledby="hours-heading">
+            <h2 id="hours-heading">Opening Hours</h2>
+            <ul>
+                <li>Monday–Friday: 07:00–17:30</li>
+                <li>Saturday: 08:00–16:00</li>
+                <li>Sunday: 08:00–16:00</li>
+                <li>Public holidays: 08:00–14:00</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="directions-heading">
+            <h2 id="directions-heading">Getting Here</h2>
+            <p>The café is located on Willow Street, close to local offices, student accommodation and public transport routes. Limited street parking is available nearby.</p>
+            <p><a href="enquiry.html">Contact us before your visit</a> if you are arranging a larger group.</p>
+        </section>
+
+        <figure>
+            <img src="images/cafe-interior.svg" alt="Illustration of a warm café interior with tables and a large window">
+            <figcaption>Oak &amp; Bean Coffee is designed as a calm, welcoming neighbourhood space.</figcaption>
+        </figure>
     </main>
 
-    <!-- Website footer -->
+    <!-- Site footer: contains business summary and key contact details -->
     <footer>
-        <p>&copy; 2026 Website Project. All rights reserved.</p>
+        <p><strong>Oak &amp; Bean Coffee</strong></p>
+        <p>Neighbourhood coffee, fresh food and a welcoming place to connect.</p>
+        <p>Email: hello@oakandbean.example | Tel: 011 555 0148</p>
+        <p>&copy; 2026 Oak &amp; Bean Coffee. Academic project for WEDE5020.</p>
     </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>

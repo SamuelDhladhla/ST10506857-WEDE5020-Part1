@@ -1,11 +1,12 @@
-/* 
-   WEDE5020 Part 1
-   Basic stylesheet placeholder.
-   Detailed CSS styling will be added in a later part of the POE.
+/*
+WEDE5020 Part 1 correction stylesheet.
+Only a small readability baseline is included here.
+Full visual styling and responsive design will be completed in Part 2.
 */
 
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
 }
@@ -13,7 +14,7 @@ body {
 header,
 main,
 footer {
-    padding: 20px;
+    padding: 1rem;
 }
 
 nav ul {
@@ -22,6 +23,11 @@ nav ul {
 }
 
 nav li {
-    display: inline;
-    margin-right: 15px;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

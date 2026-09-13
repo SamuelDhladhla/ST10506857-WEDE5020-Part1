@@ -3,50 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry | Website Project</title>
+    <meta name="description" content="Send Oak and Bean Coffee a general, group visit or booking enquiry.">
+    <title>Enquiry | Oak &amp; Bean Coffee</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <!-- Header and main navigation -->
+    <!-- Site header: repeated on every page to keep navigation consistent -->
     <header>
-        <h1>Website Project</h1>
-        <nav>
+        <a href="index.html" aria-label="Oak and Bean Coffee home">
+            <strong>Oak &amp; Bean Coffee</strong>
+        </a>
+        <nav aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services / Main Offering</a></li>
+                <li><a href="menu.html">Menu</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main page content -->
+    <!-- Main content: enquiry form with clear labels and required fields -->
     <main>
-        <section>
-            <h2>Enquiry</h2>
-            <p>Add the approved organisation's enquiry information here.</p>
-            <form>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
+        <section aria-labelledby="enquiry-heading">
+            <h1 id="enquiry-heading">Make an Enquiry</h1>
+            <p>Use the form below for general questions, group visits or booking requests. Required fields are marked with an asterisk.</p>
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+            <form action="#" method="post">
+                <p>
+                    <label for="name">Full name *</label><br>
+                    <input type="text" id="name" name="name" required>
+                </p>
 
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+                <p>
+                    <label for="email">Email address *</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
 
-                <button type="submit">Submit Enquiry</button>
+                <p>
+                    <label for="phone">Phone number</label><br>
+                    <input type="tel" id="phone" name="phone">
+                </p>
+
+                <p>
+                    <label for="enquiry-type">Enquiry type *</label><br>
+                    <select id="enquiry-type" name="enquiry-type" required>
+                        <option value="">Please select</option>
+                        <option value="general">General question</option>
+                        <option value="group">Group visit</option>
+                        <option value="booking">Booking request</option>
+                        <option value="feedback">Customer feedback</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="message">Message *</label><br>
+                    <textarea id="message" name="message" rows="7" required></textarea>
+                </p>
+
+                <button type="submit">Send Enquiry</button>
             </form>
         </section>
+
+        <aside aria-labelledby="response-heading">
+            <h2 id="response-heading">Response time</h2>
+            <p>We aim to respond to enquiries within two business days.</p>
+        </aside>
     </main>
 
-    <!-- Website footer -->
+    <!-- Site footer: contains business summary and key contact details -->
     <footer>
-        <p>&copy; 2026 Website Project. All rights reserved.</p>
+        <p><strong>Oak &amp; Bean Coffee</strong></p>
+        <p>Neighbourhood coffee, fresh food and a welcoming place to connect.</p>
+        <p>Email: hello@oakandbean.example | Tel: 011 555 0148</p>
+        <p>&copy; 2026 Oak &amp; Bean Coffee. Academic project for WEDE5020.</p>
     </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>

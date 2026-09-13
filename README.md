@@ -1,4 +1,4 @@
-# WEDE5020 Website Project
+# Oak & Bean Coffee — WEDE5020 Website Project
 
 ## Student Information
 **Student Name:** Samuel Mandla Dhladhla  
@@ -6,31 +6,33 @@
 **Module:** Web Development (Introduction)  
 **Module Code:** WEDE5020  
 
-## Project Title
-To be updated after lecturer approval.
-
 ## Project Overview
-This repository contains the Part 1 website project for WEDE5020. The final organisation will be selected after lecturer approval of the two submitted website proposals.
+Oak & Bean Coffee is a fictional neighbourhood café website created for the WEDE5020 POE. The site introduces the business, explains its story, displays its menu, allows visitors to submit enquiries, and provides contact and opening-hour information.
 
 ## Website Goals and Objectives
-To be updated once the organisation is approved.
+- Introduce Oak & Bean Coffee and its brand story.
+- Present the café menu in a clear, organised way.
+- Provide opening hours, location and contact details.
+- Allow customers to send enquiries or booking requests.
+- Create a simple structure that can be styled responsively in Part 2.
 
-## Key Features and Functionality
-- Five-page HTML5 website
-- Semantic HTML structure
-- Working navigation across all pages
-- Enquiry form
-- Contact information
-- Organised project folders
-- Git version control and regular commits
+## Key Features
+- Five content-rich HTML pages.
+- Semantic HTML5 structure.
+- Complete navigation across all pages.
+- Accessible enquiry form with labels and required fields.
+- Original SVG website illustrations.
+- Detailed content-research documentation.
+- Detailed sitemap and feedback-correction record.
+- External CSS file ready for Part 2 visual development.
 
-## Proposed File Structure
+## File Structure
 
 ```text
-WEDE5020_Part1_Starter/
+ST10506857_WEDE5020_OakBean_Part1_Corrections/
 ├── index.html
 ├── about.html
-├── services.html
+├── menu.html
 ├── enquiry.html
 ├── contact.html
 ├── css/
@@ -38,29 +40,62 @@ WEDE5020_Part1_Starter/
 ├── js/
 │   └── script.js
 ├── images/
+│   ├── hero-coffee.svg
+│   ├── coffee-card.svg
+│   ├── food-card.svg
+│   ├── baked-goods.svg
+│   └── cafe-interior.svg
 ├── docs/
+│   ├── sitemap.md
+│   └── part1-feedback-actions.md
 ├── research/
+│   ├── content-research.md
+│   └── image-sources.md
 └── README.md
 ```
 
 ## Sitemap
-To be updated after lecturer approval.
+See `docs/sitemap.md` for the detailed sitemap.
 
-## Timeline and Milestones
-- Week 1: Research and content gathering
-- Week 2: Sitemap, wireframes and file structure
-- Week 3: Develop HTML pages and add content
-- Week 4: Test navigation, fix errors and update README
+## Part 1 Feedback Corrections
+Following lecturer feedback, the website was revised to replace placeholders with full content, improve semantic HTML, add original image assets, expand the sitemap, strengthen code comments, and document content sourcing.
 
-## Part 1 Details
-Part 1 focuses on website planning, research, file organisation, semantic HTML5 structure, content integration, navigation, code comments, testing and Git/GitHub version control.
+See `docs/part1-feedback-actions.md` for the complete correction record.
+
+## Part 2 Preparation
+The HTML structure is now ready for:
+- Desktop CSS styling.
+- Typography and colour-system development.
+- Flexbox and Grid layouts.
+- Hover and focus states.
+- Responsive breakpoints.
+- Mobile and tablet navigation adjustments.
+- Responsive image handling.
+- Browser and device testing.
 
 ## Changelog
-### 15 August 2026
-- Created the initial project folder structure.
-- Added five starter HTML pages.
+
+### 13 September 2026 — Part 1 Feedback Corrections
+- Replaced placeholder text across all pages.
+- Added full Oak & Bean Coffee website content.
+- Replaced `services.html` with `menu.html`.
+- Improved semantic HTML structure and content tags.
+- Added detailed code comments.
+- Added original SVG image assets.
+- Added detailed sitemap documentation.
+- Added research and image-source documentation.
+- Updated README to record lecturer feedback corrections.
+
+### 15 August 2026 — Initial Project Structure
+- Created the initial five-page project structure.
 - Added CSS, JavaScript, images, docs and research folders.
-- Added initial README file.
+- Added initial README and navigation.
 
 ## References
-References will be added and updated throughout the project using the required institutional Harvard referencing style.
+GitHub. 2026. *GitHub Docs*. Available at: https://docs.github.com/ [Accessed 13 September 2026].
+
+MDN Web Docs. 2026. *HTML: HyperText Markup Language*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML [Accessed 13 September 2026].
+
+Microsoft. 2026. *Visual Studio Code Documentation*. Available at: https://code.visualstudio.com/docs [Accessed 13 September 2026].
+
+W3Schools. 2026. *HTML Tutorial*. Available at: https://www.w3schools.com/html/ [Accessed 13 September 2026].
