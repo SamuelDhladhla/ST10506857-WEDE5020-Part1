@@ -1,1 +1,2 @@
-// JavaScript functionality will be introduced in a later stage of the WEDE5020 POE.
+// Part 2 does not require JavaScript functionality.
+// This placeholder is retained for Part 3 of the WEDE5020 POE.

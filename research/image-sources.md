@@ -1,12 +1,11 @@
 # Image Sources
 
-All images in this project are original SVG illustrations created for the WEDE5020 academic website.
+The website uses stock photographs downloaded from Pexels and saved locally in the `images` folder.
 
-Files:
-- `hero-coffee.svg` — original coffee cup hero illustration.
-- `coffee-card.svg` — original coffee category illustration.
-- `food-card.svg` — original light meal illustration.
-- `baked-goods.svg` — original pastry illustration.
-- `cafe-interior.svg` — original café interior illustration.
+- `hero-cafe.jpg` — source filename: `pexels-muralidharan-38757822.jpg` — photographer name indicated by file: Muralidharan — Pexels.
+- `about-cafe.jpg` — source filename: `pexels-tahaasamett-13023282 (1).jpg` — photographer name indicated by file: Taha Samett — Pexels.
+- `menu-cafe.jpg` — source filename: `pexels-cottonbro-4543103.jpg` — photographer name indicated by file: cottonbro studio — Pexels.
+- `contact-cafe.jpg` — source filename: `pexels-khoa-vo-2347168-5812847.jpg` — photographer name indicated by file: Khoa Vo — Pexels.
+- `interior-cafe.jpg` — source filename: `pexels-kaantapucu-9849610.jpg` — photographer name indicated by file: Kaan Tapucu — Pexels.
 
-Because these illustrations were created specifically for the assignment, no external image licence or attribution is required.
+The photographs are used only for this academic website project. Individual Pexels source-page URLs should be retained with the original downloads if available.

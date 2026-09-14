@@ -1,53 +1,39 @@
 # Oak & Bean Coffee — Detailed Sitemap
 
 ## Home — `index.html`
-- Header and primary navigation
-- Hero introduction
-- Featured categories
-  - Coffee
-  - Light Meals
-  - Baked Goods
+- Site header and navigation
+- Hero introduction and calls to action
+- Featured offering cards
 - About preview
 - Visit information
 - Footer
 
 ## About Us — `about.html`
-- Organisation introduction
-- Our Story
-- Mission and Vision
+- Page introduction with café image
+- Story
+- Mission and vision
 - Values
-- Target Audience
 - Footer
 
 ## Menu — `menu.html`
-- Menu introduction
-- Coffee
-- Light Meals
-- Baked Goods
-- Group visit enquiry call-to-action
+- Page introduction with café image
+- Coffee section
+- Light meals section
+- Baked goods section
+- Group enquiry call-to-action
 - Footer
 
 ## Enquiry — `enquiry.html`
-- Enquiry introduction
-- Full name field
-- Email field
-- Phone field
-- Enquiry type selection
-- Message field
-- Submit button
+- Page introduction
+- Accessible enquiry form
 - Response-time information
 - Footer
 
 ## Contact — `contact.html`
-- Contact introduction
-- Address and contact details
+- Page introduction with café image
+- Contact details
 - Opening hours
 - Directions
-- Café image
 - Footer
 
-## Navigation relationship
-Every page contains the same primary navigation:
-Home → About Us → Menu → Enquiry → Contact
-
-Users can move directly between any of the five pages without returning to the Home page first.
+All five pages share the same navigation so users can move directly between pages.

@@ -3,70 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Oak and Bean Coffee, its mission, vision and values.">
+    <meta name="description" content="Learn about Oak and Bean Coffee, its mission, story and values.">
     <title>About Us | Oak &amp; Bean Coffee</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Site header: repeated on every page to keep navigation consistent -->
-    <header>
-        <a href="index.html" aria-label="Oak and Bean Coffee home">
-            <strong>Oak &amp; Bean Coffee</strong>
-        </a>
+<!-- Site header: shared across all pages for consistent navigation -->
+<header class="site-header">
+    <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Oak and Bean Coffee home">Oak &amp; Bean Coffee</a>
         <nav aria-label="Primary navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">Home</a></li><li><a href="about.html" aria-current="page">About Us</a></li><li><a href="menu.html">Menu</a></li><li><a href="enquiry.html">Enquiry</a></li><li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </header>
-
-    <!-- Main content: the organisation story, mission, values and audience -->
-    <main>
-        <section aria-labelledby="about-heading">
+    </div>
+</header>
+<main>
+    <!-- Compact internal-page introduction -->
+    <section class="page-intro" aria-labelledby="about-heading">
+        <div>
+            <p class="eyebrow">Our story</p>
             <h1 id="about-heading">About Oak &amp; Bean Coffee</h1>
-            <p>Oak &amp; Bean Coffee is a proposed neighbourhood café created as part of the WEDE5020 academic project. The concept focuses on quality coffee, fresh café food and a warm environment where customers can meet, work or socialise.</p>
-        </section>
+            <p>Oak &amp; Bean Coffee is a proposed neighbourhood café focused on quality coffee, fresh café food and a warm environment where customers can meet, work or socialise.</p>
+        </div>
+        <figure>
+            <picture>
+    <source media="(max-width: 600px)" srcset="images/interior-cafe-640.jpg">
+    <source media="(max-width: 900px)" srcset="images/interior-cafe-1200.jpg">
+    <img
+         src="images/interior-cafe.jpg"
+         srcset="images/interior-cafe-640.jpg 640w, images/interior-cafe-1200.jpg 1200w, images/interior-cafe.jpg 1600w"
+         sizes="(max-width: 600px) 92vw, (max-width: 900px) 88vw, 50vw"
+         alt="Warm café interior with counter seating and coffee equipment"
+         loading="lazy">
+</picture>
+        </figure>
+    </section>
 
-        <section aria-labelledby="story-heading">
-            <h2 id="story-heading">Our Story</h2>
-            <p>The idea behind Oak &amp; Bean Coffee is simple: create a café that feels dependable and welcoming. Instead of trying to offer everything, the business focuses on a thoughtful menu, friendly service and a comfortable atmosphere.</p>
-            <p>The name combines the strength and warmth associated with an oak tree with the coffee bean at the heart of the café experience.</p>
-        </section>
+    <section class="content-narrow" aria-labelledby="story-heading">
+        <h2 id="story-heading">Our Story</h2>
+        <p>The idea behind Oak &amp; Bean Coffee is simple: create a café that feels dependable and welcoming. Instead of trying to offer everything, the business focuses on a thoughtful menu, friendly service and a comfortable atmosphere.</p>
+        <p>The name combines the strength and warmth associated with an oak tree with the coffee bean at the heart of the café experience.</p>
+    </section>
 
-        <section aria-labelledby="mission-heading">
-            <h2 id="mission-heading">Mission and Vision</h2>
-            <h3>Mission</h3>
+    <section class="two-column" aria-labelledby="mission-heading">
+        <div>
+            <h2 id="mission-heading">Mission</h2>
             <p>To provide quality coffee, fresh food and friendly service in a relaxed neighbourhood environment.</p>
-            <h3>Vision</h3>
+        </div>
+        <div>
+            <h2>Vision</h2>
             <p>To become a trusted local café known for consistency, community and a comfortable customer experience.</p>
-        </section>
+        </div>
+    </section>
 
-        <section aria-labelledby="values-heading">
-            <h2 id="values-heading">Our Values</h2>
-            <ul>
-                <li><strong>Quality:</strong> Serve products we are proud to offer.</li>
-                <li><strong>Welcome:</strong> Make every visitor feel comfortable and respected.</li>
-                <li><strong>Consistency:</strong> Deliver a dependable experience each time customers visit.</li>
-                <li><strong>Community:</strong> Create a space where people can meet and connect.</li>
-            </ul>
-        </section>
-
-        <section aria-labelledby="audience-heading">
-            <h2 id="audience-heading">Who We Serve</h2>
-            <p>Oak &amp; Bean Coffee is designed for students, young professionals, remote workers, local residents and visitors looking for a calm and convenient café experience.</p>
-        </section>
-    </main>
-
-    <!-- Site footer: contains business summary and key contact details -->
-    <footer>
-        <p><strong>Oak &amp; Bean Coffee</strong></p>
-        <p>Neighbourhood coffee, fresh food and a welcoming place to connect.</p>
-        <p>Email: hello@oakandbean.example | Tel: 011 555 0148</p>
-        <p>&copy; 2026 Oak &amp; Bean Coffee. Academic project for WEDE5020.</p>
-    </footer>
+    <section class="section" aria-labelledby="values-heading">
+        <div class="section-heading"><h2 id="values-heading">Our Values</h2></div>
+        <div class="card-grid">
+            <article class="card"><h3>Quality</h3><p>Serve products we are proud to offer.</p></article>
+            <article class="card"><h3>Welcome</h3><p>Make every visitor feel comfortable and respected.</p></article>
+            <article class="card"><h3>Consistency</h3><p>Deliver a dependable experience every time.</p></article>
+        </div>
+    </section>
+</main>
+<!-- Site footer: shared across all pages -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div>
+            <p class="footer-brand">Oak &amp; Bean Coffee</p>
+            <p>Neighbourhood coffee, fresh food and a welcoming place to connect.</p>
+        </div>
+        <div>
+            <p><strong>Email:</strong> hello@oakandbean.example</p>
+            <p><strong>Tel:</strong> 011 555 0148</p>
+            <p>&copy; 2026 Oak &amp; Bean Coffee. Academic project for WEDE5020.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

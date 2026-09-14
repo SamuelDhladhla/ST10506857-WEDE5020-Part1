@@ -8,120 +8,112 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Site header: repeated on every page to keep navigation consistent -->
-    <header>
-        <a href="index.html" aria-label="Oak and Bean Coffee home">
-            <strong>Oak &amp; Bean Coffee</strong>
-        </a>
+<!-- Site header: shared across all pages for consistent navigation -->
+<header class="site-header">
+    <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Oak and Bean Coffee home">Oak &amp; Bean Coffee</a>
         <nav aria-label="Primary navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" aria-current="page">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="menu.html">Menu</a></li><li><a href="enquiry.html">Enquiry</a></li><li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </header>
-
-    <!-- Main content: unique content for the Home page -->
-    <main>
-        <!-- Hero section introduces the business and gives visitors a clear next action -->
-        <section aria-labelledby="hero-heading">
-            <div>
-                <p>Neighbourhood coffee. Fresh food. Good company.</p>
-                <h1 id="hero-heading">Welcome to Oak &amp; Bean Coffee</h1>
-                <p>Oak &amp; Bean Coffee is a relaxed local café created for people who enjoy quality coffee, fresh food and a comfortable place to meet, work or slow down.</p>
-                <p>
-                    <a href="menu.html">View our menu</a>
-                    <a href="contact.html">Plan your visit</a>
-                </p>
+    </div>
+</header>
+<main>
+    <!-- Home hero: introduces the brand and primary calls to action -->
+    <section class="home-hero" aria-labelledby="hero-heading">
+        <div class="hero-copy">
+            <p class="eyebrow">Neighbourhood coffee. Fresh food. Good company.</p>
+            <h1 id="hero-heading">Welcome to Oak &amp; Bean Coffee</h1>
+            <p>Oak &amp; Bean Coffee is a relaxed local café created for people who enjoy quality coffee, fresh food and a comfortable place to meet, work or slow down.</p>
+            <div class="button-row">
+                <a class="button button-primary" href="menu.html">View our menu</a>
+                <a class="button button-secondary" href="contact.html">Plan your visit</a>
             </div>
-            <figure>
-                <picture>
-                    <source media="(max-width: 600px)" srcset="images/hero-coffee.svg">
-                    <source media="(max-width: 900px)" srcset="images/hero-coffee.svg">
-                    <img src="images/hero-coffee.svg"
-                         alt="Illustration of a cup of coffee on a café table"
-                         loading="eager">
-                </picture>
-                <figcaption>Freshly prepared coffee served in a welcoming neighbourhood setting.</figcaption>
-            </figure>
-        </section>
+        </div>
+        <figure class="hero-media">
+            <picture>
+    <source media="(max-width: 600px)" srcset="images/hero-cafe-640.jpg">
+    <source media="(max-width: 900px)" srcset="images/hero-cafe-1200.jpg">
+    <img
+         src="images/hero-cafe.jpg"
+         srcset="images/hero-cafe-640.jpg 640w, images/hero-cafe-1200.jpg 1200w, images/hero-cafe.jpg 1600w"
+         sizes="(max-width: 600px) 92vw, (max-width: 900px) 88vw, 50vw"
+         alt="Warm café counter and display area inside a neighbourhood coffee shop"
+         loading="eager">
+</picture>
+            <figcaption>A warm, welcoming café atmosphere.</figcaption>
+        </figure>
+    </section>
 
-        <!-- Featured categories help visitors quickly understand the café offering -->
-        <section aria-labelledby="featured-heading">
+    <!-- Featured offering: three content cards using semantic articles -->
+    <section class="section" aria-labelledby="featured-heading">
+        <div class="section-heading">
+            <p class="eyebrow">Our offering</p>
             <h2 id="featured-heading">What you can enjoy</h2>
-
-            <article>
-                <picture>
-                    <source media="(max-width: 600px)" srcset="images/coffee-card.svg">
-                    <img src="images/coffee-card.svg"
-                         alt="Illustration of a cup of coffee"
-                         loading="lazy">
-                </picture>
+        </div>
+        <div class="card-grid">
+            <article class="card">
                 <h3>Speciality Coffee</h3>
                 <p>Espresso-based favourites, filter coffee and seasonal drinks prepared throughout the day.</p>
                 <a href="menu.html#coffee">Explore coffee</a>
             </article>
-
-            <article>
-                <picture>
-                    <source media="(max-width: 600px)" srcset="images/food-card.svg">
-                    <img src="images/food-card.svg"
-                         alt="Illustration of a fresh café sandwich"
-                         loading="lazy">
-                </picture>
+            <article class="card">
                 <h3>Light Meals</h3>
                 <p>Simple breakfast and lunch options made for quick visits, meetings and relaxed catch-ups.</p>
                 <a href="menu.html#food">Explore food</a>
             </article>
-
-            <article>
-                <picture>
-                    <source media="(max-width: 600px)" srcset="images/baked-goods.svg">
-                    <img src="images/baked-goods.svg"
-                         alt="Illustration of a freshly baked pastry"
-                         loading="lazy">
-                </picture>
+            <article class="card">
                 <h3>Baked Goods</h3>
                 <p>Fresh pastries and sweet treats that pair perfectly with your morning or afternoon coffee.</p>
                 <a href="menu.html#baked">Explore baked goods</a>
             </article>
-        </section>
+        </div>
+    </section>
 
-        <!-- About preview links the Home page to the full business story -->
-        <section aria-labelledby="about-preview-heading">
-            <figure>
-                <picture>
-                    <source media="(max-width: 600px)" srcset="images/cafe-interior.svg">
-                    <img src="images/cafe-interior.svg"
-                         alt="Illustration of the Oak and Bean Coffee café interior"
-                         loading="lazy">
-                </picture>
-            </figure>
-            <div>
-                <h2 id="about-preview-heading">A café built around community</h2>
-                <p>We want Oak &amp; Bean Coffee to feel familiar from the first visit. Our focus is friendly service, consistent quality and a calm space where people can connect.</p>
-                <a href="about.html">Read our story</a>
-            </div>
-        </section>
+    <!-- About preview combines image and text using CSS Grid -->
+    <section class="split-section" aria-labelledby="about-preview-heading">
+        <figure class="split-media">
+            <picture>
+    <source media="(max-width: 600px)" srcset="images/about-cafe-640.jpg">
+    <source media="(max-width: 900px)" srcset="images/about-cafe-1200.jpg">
+    <img
+         src="images/about-cafe.jpg"
+         srcset="images/about-cafe-640.jpg 640w, images/about-cafe-1200.jpg 1200w, images/about-cafe.jpg 1600w"
+         sizes="(max-width: 600px) 92vw, (max-width: 900px) 88vw, 50vw"
+         alt="Modern café counter with coffee equipment and warm interior lighting"
+         loading="lazy">
+</picture>
+        </figure>
+        <div class="split-copy">
+            <p class="eyebrow">About us</p>
+            <h2 id="about-preview-heading">A café built around community</h2>
+            <p>We want Oak &amp; Bean Coffee to feel familiar from the first visit. Our focus is friendly service, consistent quality and a calm space where people can connect.</p>
+            <a class="text-link" href="about.html">Read our story</a>
+        </div>
+    </section>
 
-        <!-- Visit section gives practical information without forcing users to search -->
-        <section aria-labelledby="visit-heading">
-            <h2 id="visit-heading">Visit Oak &amp; Bean</h2>
-            <p><strong>Hours:</strong> Monday–Friday 07:00–17:30, Saturday–Sunday 08:00–16:00</p>
-            <p><strong>Location:</strong> 18 Willow Street, Johannesburg, Gauteng</p>
-            <p><a href="contact.html">View contact details and directions</a></p>
-        </section>
-    </main>
-
-    <!-- Site footer: contains business summary and key contact details -->
-    <footer>
-        <p><strong>Oak &amp; Bean Coffee</strong></p>
-        <p>Neighbourhood coffee, fresh food and a welcoming place to connect.</p>
-        <p>Email: hello@oakandbean.example | Tel: 011 555 0148</p>
-        <p>&copy; 2026 Oak &amp; Bean Coffee. Academic project for WEDE5020.</p>
-    </footer>
+    <!-- Practical visit information -->
+    <section class="cta-panel" aria-labelledby="visit-heading">
+        <h2 id="visit-heading">Visit Oak &amp; Bean</h2>
+        <p><strong>Hours:</strong> Monday–Friday 07:00–17:30, Saturday–Sunday 08:00–16:00</p>
+        <p><strong>Location:</strong> 18 Willow Street, Johannesburg, Gauteng</p>
+        <a class="button button-light" href="contact.html">View contact details</a>
+    </section>
+</main>
+<!-- Site footer: shared across all pages -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div>
+            <p class="footer-brand">Oak &amp; Bean Coffee</p>
+            <p>Neighbourhood coffee, fresh food and a welcoming place to connect.</p>
+        </div>
+        <div>
+            <p><strong>Email:</strong> hello@oakandbean.example</p>
+            <p><strong>Tel:</strong> 011 555 0148</p>
+            <p>&copy; 2026 Oak &amp; Bean Coffee. Academic project for WEDE5020.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

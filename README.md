@@ -1,4 +1,4 @@
-# Oak & Bean Coffee — WEDE5020 Website Project
+# Oak & Bean Coffee — WEDE5020 Part 2
 
 ## Student Information
 **Student Name:** Samuel Mandla Dhladhla  
@@ -7,29 +7,56 @@
 **Module Code:** WEDE5020  
 
 ## Project Overview
-Oak & Bean Coffee is a fictional neighbourhood café website created for the WEDE5020 POE. The site introduces the business, explains its story, displays its menu, allows visitors to submit enquiries, and provides contact and opening-hour information.
+Oak & Bean Coffee is a fictional neighbourhood café website created for the WEDE5020 POE. Part 2 focuses on visual design, CSS, responsive layouts, usability and accessibility while also implementing feedback received from Part 1.
 
-## Website Goals and Objectives
-- Introduce Oak & Bean Coffee and its brand story.
-- Present the café menu in a clear, organised way.
-- Provide opening hours, location and contact details.
-- Allow customers to send enquiries or booking requests.
-- Create a simple structure that can be styled responsively in Part 2.
+## Part 1 Feedback Implemented
+- Replaced placeholder text with complete website content.
+- Added content research and sourcing documentation.
+- Expanded the sitemap.
+- Strengthened semantic HTML and content tags.
+- Added clearer code comments.
+- Added responsive stock photography.
+- Improved internal page layouts.
+- Continued development with descriptive Git commits.
 
-## Key Features
-- Five content-rich HTML pages.
+## Part 2 CSS and Visual Design
+The website uses one external stylesheet: `css/styles.css`.
+
+Key design choices:
+- Warm café-inspired palette using cream, brown and neutral tones.
+- Consistent Arial/Helvetica typography for readability.
+- Flexbox for the header and navigation.
+- CSS Grid for hero, card, menu, contact and form layouts.
+- Borders, shadows and subtle hover movement for visual hierarchy.
+- `:hover`, `:focus` and `:focus-visible` states for interactive elements.
+
+## Responsive Design
+Breakpoints:
+- Desktop: above 900px.
+- Tablet: 601px–900px.
+- Mobile: 600px and below.
+
+Responsive techniques:
+- Relative units including `rem`, `%`, `clamp()` and `min()`.
+- Grid layouts collapse from multiple columns to one column.
+- Navigation stacks vertically on mobile.
+- Buttons become full-width on small screens.
+- Form controls remain touch-friendly.
+- Images use `<picture>`, `srcset`, `sizes`, `width: 100%` and `height: auto`.
+
+## Accessibility and UX
 - Semantic HTML5 structure.
-- Complete navigation across all pages.
-- Accessible enquiry form with labels and required fields.
-- Original SVG website illustrations.
-- Detailed content-research documentation.
-- Detailed sitemap and feedback-correction record.
-- External CSS file ready for Part 2 visual development.
+- Meaningful headings.
+- Descriptive image `alt` text.
+- Form labels linked to inputs.
+- Visible focus states.
+- `aria-current` identifies the current page.
+- `aria-label` identifies the main navigation.
+- Readable colour contrast and spacing.
 
 ## File Structure
-
 ```text
-ST10506857_WEDE5020_OakBean_Part1_Corrections/
+ST10506857_WEDE5020_Part2_Final/
 ├── index.html
 ├── about.html
 ├── menu.html
@@ -40,62 +67,53 @@ ST10506857_WEDE5020_OakBean_Part1_Corrections/
 ├── js/
 │   └── script.js
 ├── images/
-│   ├── hero-coffee.svg
-│   ├── coffee-card.svg
-│   ├── food-card.svg
-│   ├── baked-goods.svg
-│   └── cafe-interior.svg
+├── screenshots/
 ├── docs/
-│   ├── sitemap.md
-│   └── part1-feedback-actions.md
 ├── research/
-│   ├── content-research.md
-│   └── image-sources.md
 └── README.md
 ```
 
-## Sitemap
-See `docs/sitemap.md` for the detailed sitemap.
+## Testing
+The website must be checked in a browser at desktop, tablet and mobile viewport sizes before final submission.
 
-## Part 1 Feedback Corrections
-Following lecturer feedback, the website was revised to replace placeholders with full content, improve semantic HTML, add original image assets, expand the sitemap, strengthen code comments, and document content sourcing.
+Required evidence to add:
+- `screenshots/home-desktop.png`
+- `screenshots/home-tablet.png`
+- `screenshots/home-mobile.png`
 
-See `docs/part1-feedback-actions.md` for the complete correction record.
+Recommended test widths:
+- Desktop: approximately 1440px
+- Tablet: approximately 768px
+- Mobile: approximately 390px
 
-## Part 2 Preparation
-The HTML structure is now ready for:
-- Desktop CSS styling.
-- Typography and colour-system development.
-- Flexbox and Grid layouts.
-- Hover and focus states.
-- Responsive breakpoints.
-- Mobile and tablet navigation adjustments.
-- Responsive image handling.
-- Browser and device testing.
+Check all navigation links, the enquiry form layout, image scaling, text readability, focus states and mobile navigation before taking the final screenshots.
 
 ## Changelog
+### 14 September 2026 — Part 2 Finalisation
+- Integrated stock photography.
+- Added responsive image sources and `srcset`.
+- Refined internal-page spacing and layouts.
+- Completed desktop CSS styling.
+- Added tablet and mobile media queries.
+- Added hover and focus states.
+- Improved responsive navigation.
+- Added testing screenshots and documentation.
 
 ### 13 September 2026 — Part 1 Feedback Corrections
-- Replaced placeholder text across all pages.
-- Added full Oak & Bean Coffee website content.
-- Replaced `services.html` with `menu.html`.
-- Improved semantic HTML structure and content tags.
-- Added detailed code comments.
-- Added original SVG image assets.
-- Added detailed sitemap documentation.
-- Added research and image-source documentation.
-- Updated README to record lecturer feedback corrections.
-
-### 15 August 2026 — Initial Project Structure
-- Created the initial five-page project structure.
-- Added CSS, JavaScript, images, docs and research folders.
-- Added initial README and navigation.
+- Replaced placeholder content.
+- Improved semantic HTML.
+- Added research documentation.
+- Expanded sitemap.
+- Added stronger comments.
+- Updated README and changelog.
 
 ## References
-GitHub. 2026. *GitHub Docs*. Available at: https://docs.github.com/ [Accessed 13 September 2026].
+GitHub. 2026. *GitHub Docs*. Available at: https://docs.github.com/ [Accessed 14 September 2026].
 
-MDN Web Docs. 2026. *HTML: HyperText Markup Language*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML [Accessed 13 September 2026].
+MDN Web Docs. 2026. *CSS: Cascading Style Sheets*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS [Accessed 14 September 2026].
 
-Microsoft. 2026. *Visual Studio Code Documentation*. Available at: https://code.visualstudio.com/docs [Accessed 13 September 2026].
+Microsoft. 2026. *Visual Studio Code Documentation*. Available at: https://code.visualstudio.com/docs [Accessed 14 September 2026].
 
-W3Schools. 2026. *HTML Tutorial*. Available at: https://www.w3schools.com/html/ [Accessed 13 September 2026].
+Pexels. 2026. *Free Stock Photos*. Available at: https://www.pexels.com/ [Accessed 14 September 2026].
+
+W3Schools. 2026. *CSS Tutorial*. Available at: https://www.w3schools.com/css/ [Accessed 14 September 2026].

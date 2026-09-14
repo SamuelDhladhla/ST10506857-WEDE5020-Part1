@@ -8,76 +8,78 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Site header: repeated on every page to keep navigation consistent -->
-    <header>
-        <a href="index.html" aria-label="Oak and Bean Coffee home">
-            <strong>Oak &amp; Bean Coffee</strong>
-        </a>
+<!-- Site header: shared across all pages for consistent navigation -->
+<header class="site-header">
+    <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Oak and Bean Coffee home">Oak &amp; Bean Coffee</a>
         <nav aria-label="Primary navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="menu.html">Menu</a></li><li><a href="enquiry.html" aria-current="page">Enquiry</a></li><li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </header>
-
-    <!-- Main content: enquiry form with clear labels and required fields -->
-    <main>
-        <section aria-labelledby="enquiry-heading">
+    </div>
+</header>
+<main>
+    <section class="page-intro page-intro-text" aria-labelledby="enquiry-heading">
+        <div>
+            <p class="eyebrow">Get in touch</p>
             <h1 id="enquiry-heading">Make an Enquiry</h1>
             <p>Use the form below for general questions, group visits or booking requests. Required fields are marked with an asterisk.</p>
+        </div>
+    </section>
 
-            <form action="#" method="post">
-                <p>
-                    <label for="name">Full name *</label><br>
-                    <input type="text" id="name" name="name" required>
-                </p>
+    <!-- Accessible form: every input is paired with a visible label -->
+    <section class="form-layout">
+        <form action="#" method="post">
+            <div class="field">
+                <label for="name">Full name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field">
+                <label for="email">Email address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="field">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="field">
+                <label for="enquiry-type">Enquiry type *</label>
+                <select id="enquiry-type" name="enquiry-type" required>
+                    <option value="">Please select</option>
+                    <option value="general">General question</option>
+                    <option value="group">Group visit</option>
+                    <option value="booking">Booking request</option>
+                    <option value="feedback">Customer feedback</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="7" required></textarea>
+            </div>
+            <button type="submit">Send Enquiry</button>
+        </form>
 
-                <p>
-                    <label for="email">Email address *</label><br>
-                    <input type="email" id="email" name="email" required>
-                </p>
-
-                <p>
-                    <label for="phone">Phone number</label><br>
-                    <input type="tel" id="phone" name="phone">
-                </p>
-
-                <p>
-                    <label for="enquiry-type">Enquiry type *</label><br>
-                    <select id="enquiry-type" name="enquiry-type" required>
-                        <option value="">Please select</option>
-                        <option value="general">General question</option>
-                        <option value="group">Group visit</option>
-                        <option value="booking">Booking request</option>
-                        <option value="feedback">Customer feedback</option>
-                    </select>
-                </p>
-
-                <p>
-                    <label for="message">Message *</label><br>
-                    <textarea id="message" name="message" rows="7" required></textarea>
-                </p>
-
-                <button type="submit">Send Enquiry</button>
-            </form>
-        </section>
-
-        <aside aria-labelledby="response-heading">
+        <aside class="info-panel" aria-labelledby="response-heading">
             <h2 id="response-heading">Response time</h2>
             <p>We aim to respond to enquiries within two business days.</p>
+            <p>For urgent questions during opening hours, call 011 555 0148.</p>
         </aside>
-    </main>
-
-    <!-- Site footer: contains business summary and key contact details -->
-    <footer>
-        <p><strong>Oak &amp; Bean Coffee</strong></p>
-        <p>Neighbourhood coffee, fresh food and a welcoming place to connect.</p>
-        <p>Email: hello@oakandbean.example | Tel: 011 555 0148</p>
-        <p>&copy; 2026 Oak &amp; Bean Coffee. Academic project for WEDE5020.</p>
-    </footer>
+    </section>
+</main>
+<!-- Site footer: shared across all pages -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div>
+            <p class="footer-brand">Oak &amp; Bean Coffee</p>
+            <p>Neighbourhood coffee, fresh food and a welcoming place to connect.</p>
+        </div>
+        <div>
+            <p><strong>Email:</strong> hello@oakandbean.example</p>
+            <p><strong>Tel:</strong> 011 555 0148</p>
+            <p>&copy; 2026 Oak &amp; Bean Coffee. Academic project for WEDE5020.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
