@@ -1,67 +1,84 @@
-# Oak & Bean Coffee — WEDE5020 Part 2
+# Oak & Bean Coffee — WEDE5020 Part 3
 
 ## Student Information
 **Student Name:** Samuel Mandla Dhladhla  
 **Student Number:** ST10506857  
 **Module:** Web Development (Introduction)  
-**Module Code:** WEDE5020  
+**Module Code:** WEDE5020
 
 ## Project Overview
-Oak & Bean Coffee is a fictional neighbourhood café website created for the WEDE5020 POE. Part 2 focuses on visual design, CSS, responsive layouts, usability and accessibility while also implementing feedback received from Part 1.
+Oak & Bean Coffee is a fictional neighbourhood café website created for the WEDE5020 POE. Part 3 extends the responsive Part 2 website with JavaScript functionality, validated forms, interactive components, external content, SEO improvements and deployment preparation.
 
-## Part 1 Feedback Implemented
-- Replaced placeholder text with complete website content.
-- Added content research and sourcing documentation.
-- Expanded the sitemap.
-- Strengthened semantic HTML and content tags.
-- Added clearer code comments.
-- Added responsive stock photography.
-- Improved internal page layouts.
-- Continued development with descriptive Git commits.
+## Part 2 Feedback
+Part 2 achieved **98/100 (Level 4)**. No specific corrective written comments were supplied in the material provided with the result. The successful visual design and responsive system were retained and extended for Part 3.
 
-## Part 2 CSS and Visual Design
-The website uses one external stylesheet: `css/styles.css`.
+## Part 3 Functionality
+### Dynamic menu
+The Menu page is rendered from a JavaScript data array. Visitors can:
+- Search menu item names and descriptions.
+- Filter by category.
+- Sort by price or name.
 
-Key design choices:
-- Warm café-inspired palette using cream, brown and neutral tones.
-- Consistent Arial/Helvetica typography for readability.
-- Flexbox for the header and navigation.
-- CSS Grid for hero, card, menu, contact and form layouts.
-- Borders, shadows and subtle hover movement for visual hierarchy.
-- `:hover`, `:focus` and `:focus-visible` states for interactive elements.
+### Interactive components
+- FAQ accordion.
+- Image gallery lightbox.
+- Scroll-reveal animations.
+- DOM manipulation using safe `textContent` and created elements.
 
-## Responsive Design
-Breakpoints:
-- Desktop: above 900px.
-- Tablet: 601px–900px.
-- Mobile: 600px and below.
+### External service
+The Contact page embeds Google Maps to provide location context.
 
-Responsive techniques:
-- Relative units including `rem`, `%`, `clamp()` and `min()`.
-- Grid layouts collapse from multiple columns to one column.
-- Navigation stacks vertically on mobile.
-- Buttons become full-width on small screens.
-- Form controls remain touch-friendly.
-- Images use `<picture>`, `srcset`, `sizes`, `width: 100%` and `height: auto`.
+## Forms and Validation
+Two different forms are included:
+- `enquiry.html`: menu, catering, booking and group visit enquiries.
+- `contact.html`: general contact messages.
 
-## Accessibility and UX
-- Semantic HTML5 structure.
-- Meaningful headings.
-- Descriptive image `alt` text.
-- Form labels linked to inputs.
-- Visible focus states.
-- `aria-current` identifies the current page.
-- `aria-label` identifies the main navigation.
-- Readable colour contrast and spacing.
+Both forms include:
+- HTML5 validation attributes.
+- JavaScript validation.
+- Field-specific error messages.
+- Asynchronous `fetch()` submission demonstration.
+- A mailto fallback recipient in the form action.
+
+## SEO
+### On-page
+- Unique titles and meta descriptions.
+- Page-specific keyword metadata.
+- Logical heading structure.
+- Descriptive image alt text.
+- Internal linking.
+- Responsive/mobile-friendly design.
+- Open Graph and Twitter metadata.
+- Local café structured data.
+
+### Technical
+- `robots.txt`.
+- `sitemap.xml`.
+- Deferred JavaScript.
+- Responsive images, lazy loading and explicit image dimensions.
+- Semantic HTML and accessibility features.
+
+### Off-page strategy
+For a real business, off-page SEO would include relevant local backlinks, social media promotion, directory listings and an optimised Google Business Profile.
+
+## Deployment
+Recommended deployment: GitHub Pages.
+
+Expected deployment URL:  
+`https://samueldhladhla.github.io/ST10506857-WEDE5020-Part1/`
+
+See `docs/deployment.md`.
 
 ## File Structure
 ```text
-ST10506857_WEDE5020_Part2_Final/
+ST10506857_WEDE5020_Part3_Final/
 ├── index.html
 ├── about.html
 ├── menu.html
 ├── enquiry.html
 ├── contact.html
+├── robots.txt
+├── sitemap.xml
 ├── css/
 │   └── styles.css
 ├── js/
@@ -69,51 +86,61 @@ ST10506857_WEDE5020_Part2_Final/
 ├── images/
 ├── screenshots/
 ├── docs/
+│   ├── part1-feedback-actions.md
+│   ├── part2-feedback-actions.md
+│   ├── sitemap.md
+│   ├── seo-plan.md
+│   └── deployment.md
 ├── research/
 └── README.md
 ```
 
-## Testing
-The website must be checked in a browser at desktop, tablet and mobile viewport sizes before final submission.
-
-Required evidence to add:
-- `screenshots/home-desktop.png`
-- `screenshots/home-tablet.png`
-- `screenshots/home-mobile.png`
-
-Recommended test widths:
-- Desktop: approximately 1440px
-- Tablet: approximately 768px
-- Mobile: approximately 390px
-
-Check all navigation links, the enquiry form layout, image scaling, text readability, focus states and mobile navigation before taking the final screenshots.
-
 ## Changelog
+### 9 October 2026 — Part 3 Functionality and SEO
+- Added JavaScript dynamic menu rendering.
+- Added menu search, category filters and sorting.
+- Added FAQ accordion.
+- Added gallery lightbox.
+- Added scroll-reveal animations.
+- Added validated enquiry and contact forms.
+- Added asynchronous form submission demonstration.
+- Added Google Maps embed.
+- Added unique SEO metadata to every page.
+- Added Open Graph and Twitter metadata.
+- Added LocalBusiness structured data.
+- Added `robots.txt` and `sitemap.xml`.
+- Added SEO and deployment documentation.
+
 ### 14 September 2026 — Part 2 Finalisation
 - Integrated stock photography.
-- Added responsive image sources and `srcset`.
-- Refined internal-page spacing and layouts.
-- Completed desktop CSS styling.
-- Added tablet and mobile media queries.
-- Added hover and focus states.
-- Improved responsive navigation.
-- Added testing screenshots and documentation.
+- Added responsive image sources.
+- Completed responsive CSS.
+- Added responsive testing evidence.
+- Improved accessibility and navigation.
 
 ### 13 September 2026 — Part 1 Feedback Corrections
 - Replaced placeholder content.
 - Improved semantic HTML.
 - Added research documentation.
-- Expanded sitemap.
-- Added stronger comments.
-- Updated README and changelog.
+- Expanded sitemap and comments.
+
+## Suggested Part 3 Commit Messages
+1. `Add Part 3 JavaScript interactions and dynamic menu`
+2. `Add validated enquiry and contact forms`
+3. `Implement SEO metadata robots and sitemap`
+4. `Add deployment documentation and final Part 3 README`
 
 ## References
-GitHub. 2026. *GitHub Docs*. Available at: https://docs.github.com/ [Accessed 14 September 2026].
+Google. 2026. *Google Search Central: SEO Starter Guide*. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide [Accessed 9 October 2026].
 
-MDN Web Docs. 2026. *CSS: Cascading Style Sheets*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS [Accessed 14 September 2026].
+Google Maps. 2026. *Google Maps*. Available at: https://www.google.com/maps [Accessed 9 October 2026].
 
-Microsoft. 2026. *Visual Studio Code Documentation*. Available at: https://code.visualstudio.com/docs [Accessed 14 September 2026].
+GitHub. 2026. *GitHub Pages Documentation*. Available at: https://docs.github.com/pages [Accessed 9 October 2026].
 
-Pexels. 2026. *Free Stock Photos*. Available at: https://www.pexels.com/ [Accessed 14 September 2026].
+MDN Web Docs. 2026. *Fetch API*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API [Accessed 9 October 2026].
 
-W3Schools. 2026. *CSS Tutorial*. Available at: https://www.w3schools.com/css/ [Accessed 14 September 2026].
+MDN Web Docs. 2026. *JavaScript Guide*. Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide [Accessed 9 October 2026].
+
+Pexels. 2026. *Free Stock Photos*. Available at: https://www.pexels.com/ [Accessed 9 October 2026].
+
+W3Schools. 2026. *JavaScript Tutorial*. Available at: https://www.w3schools.com/js/ [Accessed 9 October 2026].
