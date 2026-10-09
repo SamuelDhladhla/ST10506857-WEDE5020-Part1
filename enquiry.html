@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Send Oak and Bean Coffee a general, group visit or booking enquiry.">
-    <title>Enquiry | Oak &amp; Bean Coffee</title>
+    <meta name="description" content="Send Oak & Bean Coffee a booking, menu, catering or group visit enquiry using our validated online form.">
+    <meta name="keywords" content="café booking Johannesburg, group booking, catering enquiry, coffee shop enquiry">
+    <meta name="author" content="Samuel Mandla Dhladhla">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://samueldhladhla.github.io/ST10506857-WEDE5020-Part1/enquiry.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bookings & Café Enquiries | Oak & Bean Coffee">
+    <meta property="og:description" content="Send Oak & Bean Coffee a booking, menu, catering or group visit enquiry using our validated online form.">
+    <meta property="og:url" content="https://samueldhladhla.github.io/ST10506857-WEDE5020-Part1/enquiry.html">
+    <meta property="og:image" content="https://samueldhladhla.github.io/ST10506857-WEDE5020-Part1/images/about-cafe.jpg">
+    <meta property="og:site_name" content="Oak & Bean Coffee">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bookings & Café Enquiries | Oak & Bean Coffee">
+    <meta name="twitter:description" content="Send Oak & Bean Coffee a booking, menu, catering or group visit enquiry using our validated online form.">
+    <title>Bookings & Café Enquiries | Oak &amp; Bean Coffee</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <!-- Site header: shared across all pages for consistent navigation -->
 <header class="site-header">
     <div class="header-inner">
@@ -19,45 +35,25 @@
         </nav>
     </div>
 </header>
-<main>
-    <section class="page-intro page-intro-text" aria-labelledby="enquiry-heading">
+<main id="main-content">
+    <section class="page-intro page-intro-text reveal" aria-labelledby="enquiry-heading">
         <div>
             <p class="eyebrow">Get in touch</p>
             <h1 id="enquiry-heading">Make an Enquiry</h1>
-            <p>Use the form below for general questions, group visits or booking requests. Required fields are marked with an asterisk.</p>
+            <p>Use the form below for menu questions, group visits or booking requests. JavaScript validation checks your details before the form is sent.</p>
         </div>
     </section>
 
-    <!-- Accessible form: every input is paired with a visible label -->
-    <section class="form-layout">
-        <form action="#" method="post">
-            <div class="field">
-                <label for="name">Full name *</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="field">
-                <label for="email">Email address *</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="field">
-                <label for="phone">Phone number</label>
-                <input type="tel" id="phone" name="phone">
-            </div>
-            <div class="field">
-                <label for="enquiry-type">Enquiry type *</label>
-                <select id="enquiry-type" name="enquiry-type" required>
-                    <option value="">Please select</option>
-                    <option value="general">General question</option>
-                    <option value="group">Group visit</option>
-                    <option value="booking">Booking request</option>
-                    <option value="feedback">Customer feedback</option>
-                </select>
-            </div>
-            <div class="field">
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" rows="7" required></textarea>
-            </div>
+    <section class="form-layout reveal">
+        <form id="enquiry-form" class="ajax-form" action="mailto:hello@oakandbean.example" method="post" enctype="text/plain" novalidate data-form-type="enquiry">
+            <div class="field"><label for="enquiry-name">Full name *</label><input type="text" id="enquiry-name" name="name" minlength="2" maxlength="80" required><small class="error-message" data-error-for="enquiry-name"></small></div>
+            <div class="field"><label for="enquiry-email">Email address *</label><input type="email" id="enquiry-email" name="email" required><small class="error-message" data-error-for="enquiry-email"></small></div>
+            <div class="field"><label for="enquiry-phone">Phone number *</label><input type="tel" id="enquiry-phone" name="phone" pattern="[0-9+() -]{10,20}" required><small class="error-message" data-error-for="enquiry-phone"></small></div>
+            <div class="field"><label for="enquiry-type">Enquiry type *</label><select id="enquiry-type" name="type" required><option value="">Please select</option><option value="menu">Menu question</option><option value="group">Group visit</option><option value="booking">Booking request</option><option value="catering">Catering enquiry</option></select><small class="error-message" data-error-for="enquiry-type"></small></div>
+            <div class="field"><label for="visit-date">Preferred date</label><input type="date" id="visit-date" name="date"></div>
+            <div class="field"><label for="enquiry-message">Message *</label><textarea id="enquiry-message" name="message" rows="7" minlength="10" maxlength="1000" required></textarea><small class="error-message" data-error-for="enquiry-message"></small></div>
             <button type="submit">Send Enquiry</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
         </form>
 
         <aside class="info-panel" aria-labelledby="response-heading">
@@ -65,6 +61,24 @@
             <p>We aim to respond to enquiries within two business days.</p>
             <p>For urgent questions during opening hours, call 011 555 0148.</p>
         </aside>
+    </section>
+
+    <section class="section reveal" aria-labelledby="faq-heading">
+        <div class="section-heading"><p class="eyebrow">Common questions</p><h2 id="faq-heading">Frequently Asked Questions</h2></div>
+        <div class="accordion" data-accordion>
+            <article class="accordion-item">
+                <h3><button type="button" class="accordion-trigger" aria-expanded="false">Do you take group bookings?</button></h3>
+                <div class="accordion-panel" hidden><p>Yes. Use the enquiry form and select “Group visit” so we can confirm availability.</p></div>
+            </article>
+            <article class="accordion-item">
+                <h3><button type="button" class="accordion-trigger" aria-expanded="false">Do you offer vegetarian options?</button></h3>
+                <div class="accordion-panel" hidden><p>Yes. Our menu includes vegetarian-friendly light meals and baked goods.</p></div>
+            </article>
+            <article class="accordion-item">
+                <h3><button type="button" class="accordion-trigger" aria-expanded="false">How quickly will you reply?</button></h3>
+                <div class="accordion-panel" hidden><p>We aim to respond within two business days.</p></div>
+            </article>
+        </div>
     </section>
 </main>
 <!-- Site footer: shared across all pages -->
@@ -75,8 +89,8 @@
             <p>Neighbourhood coffee, fresh food and a welcoming place to connect.</p>
         </div>
         <div>
-            <p><strong>Email:</strong> hello@oakandbean.example</p>
-            <p><strong>Tel:</strong> 011 555 0148</p>
+            <p><strong>Email:</strong> <a href="mailto:hello@oakandbean.example">hello@oakandbean.example</a></p>
+            <p><strong>Tel:</strong> <a href="tel:+27115550148">011 555 0148</a></p>
             <p>&copy; 2026 Oak &amp; Bean Coffee. Academic project for WEDE5020.</p>
         </div>
     </div>

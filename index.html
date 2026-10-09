@@ -3,11 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Oak and Bean Coffee neighbourhood café home page.">
-    <title>Home | Oak &amp; Bean Coffee</title>
+    <meta name="description" content="Discover Oak & Bean Coffee, a welcoming Johannesburg neighbourhood café serving speciality coffee, light meals and freshly baked treats.">
+    <meta name="keywords" content="Johannesburg coffee shop, neighbourhood café, speciality coffee, light meals, baked goods">
+    <meta name="author" content="Samuel Mandla Dhladhla">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://samueldhladhla.github.io/ST10506857-WEDE5020-Part1/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Neighbourhood Café in Johannesburg | Oak & Bean Coffee">
+    <meta property="og:description" content="Discover Oak & Bean Coffee, a welcoming Johannesburg neighbourhood café serving speciality coffee, light meals and freshly baked treats.">
+    <meta property="og:url" content="https://samueldhladhla.github.io/ST10506857-WEDE5020-Part1/index.html">
+    <meta property="og:image" content="https://samueldhladhla.github.io/ST10506857-WEDE5020-Part1/images/hero-cafe.jpg">
+    <meta property="og:site_name" content="Oak & Bean Coffee">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Neighbourhood Café in Johannesburg | Oak & Bean Coffee">
+    <meta name="twitter:description" content="Discover Oak & Bean Coffee, a welcoming Johannesburg neighbourhood café serving speciality coffee, light meals and freshly baked treats.">
+    <title>Neighbourhood Café in Johannesburg | Oak &amp; Bean Coffee</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Oak & Bean Coffee",
+      "description": "A relaxed neighbourhood café serving speciality coffee, light meals and baked goods.",
+      "url": "https://samueldhladhla.github.io/ST10506857-WEDE5020-Part1/",
+      "telephone": "+27 11 555 0148",
+      "email": "hello@oakandbean.example",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "18 Willow Street",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "openingHours": [
+        "Mo-Fr 07:00-17:30",
+        "Sa-Su 08:00-16:00"
+      ]
+    }
+    </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <!-- Site header: shared across all pages for consistent navigation -->
 <header class="site-header">
     <div class="header-inner">
@@ -19,9 +56,8 @@
         </nav>
     </div>
 </header>
-<main>
-    <!-- Home hero: introduces the brand and primary calls to action -->
-    <section class="home-hero" aria-labelledby="hero-heading">
+<main id="main-content">
+    <section class="home-hero reveal" aria-labelledby="hero-heading">
         <div class="hero-copy">
             <p class="eyebrow">Neighbourhood coffee. Fresh food. Good company.</p>
             <h1 id="hero-heading">Welcome to Oak &amp; Bean Coffee</h1>
@@ -39,52 +75,38 @@
          src="images/hero-cafe.jpg"
          srcset="images/hero-cafe-640.jpg 640w, images/hero-cafe-1200.jpg 1200w, images/hero-cafe.jpg 1600w"
          sizes="(max-width: 600px) 92vw, (max-width: 900px) 88vw, 50vw"
+         width="2048" height="1365"
          alt="Warm café counter and display area inside a neighbourhood coffee shop"
-         loading="eager">
+         loading="eager" fetchpriority="high">
 </picture>
             <figcaption>A warm, welcoming café atmosphere.</figcaption>
         </figure>
     </section>
 
-    <!-- Featured offering: three content cards using semantic articles -->
-    <section class="section" aria-labelledby="featured-heading">
+    <section class="section reveal" aria-labelledby="featured-heading">
         <div class="section-heading">
             <p class="eyebrow">Our offering</p>
             <h2 id="featured-heading">What you can enjoy</h2>
         </div>
         <div class="card-grid">
-            <article class="card">
-                <h3>Speciality Coffee</h3>
-                <p>Espresso-based favourites, filter coffee and seasonal drinks prepared throughout the day.</p>
-                <a href="menu.html#coffee">Explore coffee</a>
-            </article>
-            <article class="card">
-                <h3>Light Meals</h3>
-                <p>Simple breakfast and lunch options made for quick visits, meetings and relaxed catch-ups.</p>
-                <a href="menu.html#food">Explore food</a>
-            </article>
-            <article class="card">
-                <h3>Baked Goods</h3>
-                <p>Fresh pastries and sweet treats that pair perfectly with your morning or afternoon coffee.</p>
-                <a href="menu.html#baked">Explore baked goods</a>
-            </article>
+            <article class="card"><h3>Speciality Coffee</h3><p>Espresso-based favourites, filter coffee and seasonal drinks prepared throughout the day.</p><a href="menu.html?category=coffee">Explore coffee</a></article>
+            <article class="card"><h3>Light Meals</h3><p>Simple breakfast and lunch options made for quick visits, meetings and relaxed catch-ups.</p><a href="menu.html?category=food">Explore food</a></article>
+            <article class="card"><h3>Baked Goods</h3><p>Fresh pastries and sweet treats that pair perfectly with your morning or afternoon coffee.</p><a href="menu.html?category=baked">Explore baked goods</a></article>
         </div>
     </section>
 
-    <!-- About preview combines image and text using CSS Grid -->
-    <section class="split-section" aria-labelledby="about-preview-heading">
-        <figure class="split-media">
-            <picture>
+    <section class="split-section reveal" aria-labelledby="about-preview-heading">
+        <figure class="split-media"><picture>
     <source media="(max-width: 600px)" srcset="images/about-cafe-640.jpg">
     <source media="(max-width: 900px)" srcset="images/about-cafe-1200.jpg">
     <img
          src="images/about-cafe.jpg"
          srcset="images/about-cafe-640.jpg 640w, images/about-cafe-1200.jpg 1200w, images/about-cafe.jpg 1600w"
          sizes="(max-width: 600px) 92vw, (max-width: 900px) 88vw, 50vw"
+         width="1365" height="2048"
          alt="Modern café counter with coffee equipment and warm interior lighting"
          loading="lazy">
-</picture>
-        </figure>
+</picture></figure>
         <div class="split-copy">
             <p class="eyebrow">About us</p>
             <h2 id="about-preview-heading">A café built around community</h2>
@@ -93,8 +115,7 @@
         </div>
     </section>
 
-    <!-- Practical visit information -->
-    <section class="cta-panel" aria-labelledby="visit-heading">
+    <section class="cta-panel reveal" aria-labelledby="visit-heading">
         <h2 id="visit-heading">Visit Oak &amp; Bean</h2>
         <p><strong>Hours:</strong> Monday–Friday 07:00–17:30, Saturday–Sunday 08:00–16:00</p>
         <p><strong>Location:</strong> 18 Willow Street, Johannesburg, Gauteng</p>
@@ -109,8 +130,8 @@
             <p>Neighbourhood coffee, fresh food and a welcoming place to connect.</p>
         </div>
         <div>
-            <p><strong>Email:</strong> hello@oakandbean.example</p>
-            <p><strong>Tel:</strong> 011 555 0148</p>
+            <p><strong>Email:</strong> <a href="mailto:hello@oakandbean.example">hello@oakandbean.example</a></p>
+            <p><strong>Tel:</strong> <a href="tel:+27115550148">011 555 0148</a></p>
             <p>&copy; 2026 Oak &amp; Bean Coffee. Academic project for WEDE5020.</p>
         </div>
     </div>

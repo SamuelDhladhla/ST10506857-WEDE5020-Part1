@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="View the Oak and Bean Coffee menu of coffee, light meals and baked goods.">
-    <title>Menu | Oak &amp; Bean Coffee</title>
+    <meta name="description" content="Browse Oak & Bean Coffee's menu of speciality coffee, light meals and baked goods, with search, filters and prices.">
+    <meta name="keywords" content="coffee menu Johannesburg, cappuccino, light meals, croissants, café menu">
+    <meta name="author" content="Samuel Mandla Dhladhla">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://samueldhladhla.github.io/ST10506857-WEDE5020-Part1/menu.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Coffee, Light Meals & Baked Goods Menu | Oak & Bean Coffee">
+    <meta property="og:description" content="Browse Oak & Bean Coffee's menu of speciality coffee, light meals and baked goods, with search, filters and prices.">
+    <meta property="og:url" content="https://samueldhladhla.github.io/ST10506857-WEDE5020-Part1/menu.html">
+    <meta property="og:image" content="https://samueldhladhla.github.io/ST10506857-WEDE5020-Part1/images/menu-cafe.jpg">
+    <meta property="og:site_name" content="Oak & Bean Coffee">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Coffee, Light Meals & Baked Goods Menu | Oak & Bean Coffee">
+    <meta name="twitter:description" content="Browse Oak & Bean Coffee's menu of speciality coffee, light meals and baked goods, with search, filters and prices.">
+    <title>Coffee, Light Meals & Baked Goods Menu | Oak &amp; Bean Coffee</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <!-- Site header: shared across all pages for consistent navigation -->
 <header class="site-header">
     <div class="header-inner">
@@ -19,57 +35,60 @@
         </nav>
     </div>
 </header>
-<main>
-    <!-- Menu introduction with responsive stock image -->
-    <section class="page-intro" aria-labelledby="menu-heading">
+<main id="main-content">
+    <section class="page-intro reveal" aria-labelledby="menu-heading">
         <div>
             <p class="eyebrow">Fresh throughout the day</p>
             <h1 id="menu-heading">Our Menu</h1>
-            <p>Our menu keeps things simple with coffee, light meals and baked goods suitable for breakfast, lunch or a quick break.</p>
+            <p>Search, filter and sort the menu to find your next Oak &amp; Bean favourite.</p>
         </div>
-        <figure>
-            <picture>
+        <figure><picture>
     <source media="(max-width: 600px)" srcset="images/menu-cafe-640.jpg">
     <source media="(max-width: 900px)" srcset="images/menu-cafe-1200.jpg">
     <img
          src="images/menu-cafe.jpg"
          srcset="images/menu-cafe-640.jpg 640w, images/menu-cafe-1200.jpg 1200w, images/menu-cafe.jpg 1600w"
          sizes="(max-width: 600px) 92vw, (max-width: 900px) 88vw, 50vw"
+         width="1367" height="2048"
          alt="Café counter with menu boards and coffee-making equipment"
          loading="lazy">
-</picture>
-        </figure>
+</picture></figure>
     </section>
 
-    <section id="coffee" class="menu-section" aria-labelledby="coffee-heading">
-        <h2 id="coffee-heading">Coffee</h2>
-        <div class="menu-grid">
-            <article class="menu-item"><div><h3>Espresso</h3><p>A short, rich coffee with a full-bodied flavour.</p></div><strong>R28</strong></article>
-            <article class="menu-item"><div><h3>Americano</h3><p>Espresso topped with hot water for a smooth, balanced cup.</p></div><strong>R32</strong></article>
-            <article class="menu-item"><div><h3>Cappuccino</h3><p>Espresso with steamed milk and a generous layer of foam.</p></div><strong>R38</strong></article>
-            <article class="menu-item"><div><h3>Flat White</h3><p>Double espresso with silky steamed milk and a smooth finish.</p></div><strong>R42</strong></article>
+    <section class="section reveal" aria-labelledby="menu-tools-heading">
+        <div class="section-heading">
+            <p class="eyebrow">Find something quickly</p>
+            <h2 id="menu-tools-heading">Browse the menu</h2>
         </div>
-    </section>
-
-    <section id="food" class="menu-section" aria-labelledby="food-heading">
-        <h2 id="food-heading">Light Meals</h2>
-        <div class="menu-grid">
-            <article class="menu-item"><div><h3>Breakfast Toast</h3><p>Sourdough toast with scrambled eggs, tomato and baby spinach.</p></div><strong>R72</strong></article>
-            <article class="menu-item"><div><h3>Chicken Pesto Toastie</h3><p>Grilled chicken, basil pesto, mozzarella and tomato on toasted sourdough.</p></div><strong>R86</strong></article>
-            <article class="menu-item"><div><h3>Roasted Vegetable Wrap</h3><p>Roasted vegetables, hummus and fresh leaves in a soft wrap.</p></div><strong>R78</strong></article>
+        <div class="menu-tools">
+            <div class="field compact-field">
+                <label for="menu-search">Search menu</label>
+                <input id="menu-search" type="search" placeholder="Try cappuccino or croissant">
+            </div>
+            <div class="field compact-field">
+                <label for="menu-category">Category</label>
+                <select id="menu-category">
+                    <option value="all">All categories</option>
+                    <option value="coffee">Coffee</option>
+                    <option value="food">Light meals</option>
+                    <option value="baked">Baked goods</option>
+                </select>
+            </div>
+            <div class="field compact-field">
+                <label for="menu-sort">Sort</label>
+                <select id="menu-sort">
+                    <option value="default">Recommended</option>
+                    <option value="price-asc">Price: low to high</option>
+                    <option value="price-desc">Price: high to low</option>
+                    <option value="name">Name A–Z</option>
+                </select>
+            </div>
         </div>
+        <p id="menu-results" class="results-summary" aria-live="polite"></p>
+        <div id="dynamic-menu" class="menu-grid" aria-live="polite"></div>
     </section>
 
-    <section id="baked" class="menu-section" aria-labelledby="baked-heading">
-        <h2 id="baked-heading">Baked Goods</h2>
-        <div class="menu-grid">
-            <article class="menu-item"><div><h3>Butter Croissant</h3><p>Classic flaky croissant baked until golden.</p></div><strong>R34</strong></article>
-            <article class="menu-item"><div><h3>Chocolate Muffin</h3><p>Soft chocolate muffin with chocolate pieces.</p></div><strong>R38</strong></article>
-            <article class="menu-item"><div><h3>Carrot Cake Slice</h3><p>Spiced carrot cake finished with cream cheese icing.</p></div><strong>R48</strong></article>
-        </div>
-    </section>
-
-    <section class="cta-panel" aria-labelledby="group-heading">
+    <section class="cta-panel reveal" aria-labelledby="group-heading">
         <h2 id="group-heading">Planning a group visit?</h2>
         <p>For larger groups or special requests, send us an enquiry and we will get back to you.</p>
         <a class="button button-light" href="enquiry.html">Make an enquiry</a>
@@ -83,8 +102,8 @@
             <p>Neighbourhood coffee, fresh food and a welcoming place to connect.</p>
         </div>
         <div>
-            <p><strong>Email:</strong> hello@oakandbean.example</p>
-            <p><strong>Tel:</strong> 011 555 0148</p>
+            <p><strong>Email:</strong> <a href="mailto:hello@oakandbean.example">hello@oakandbean.example</a></p>
+            <p><strong>Tel:</strong> <a href="tel:+27115550148">011 555 0148</a></p>
             <p>&copy; 2026 Oak &amp; Bean Coffee. Academic project for WEDE5020.</p>
         </div>
     </div>
