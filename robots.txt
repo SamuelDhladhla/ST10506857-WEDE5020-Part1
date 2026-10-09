@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://samueldhladhla.github.io/ST10506857-WEDE5020-Part1/sitemap.xml
